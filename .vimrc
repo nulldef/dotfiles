@@ -46,7 +46,8 @@ nnoremap <Leader><Up> <C-W>j
 nnoremap <Leader><Down> <C-W>k
 nnoremap <Leader><Right> <C-W>l
 nnoremap $ g_
-nnoremap ff ^
+noremap ff ^
+map fx :ALEFix<CR>
 map qq :bd<CR>
 imap jj <Esc>
 cnoremap <expr> %% expand('%:h').'/'
