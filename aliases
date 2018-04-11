@@ -1,0 +1,42 @@
+# vim: set syntax=sh
+
+function sql() {
+  db="db" 
+  if [[ $1 != "" ]]; then
+    db=$1
+  fi  
+    
+  env="development"
+  if [[ $2 != "" ]]; then
+    env=$2
+  fi
+
+  database="${db}_${env}"
+  PAGER=less LESS="-ierRMSx4 -FX" psql -Upostgres $database
+}
+
+function quoute () {
+  _quoutes="It works on my machine."
+
+  echo $_quoutes | gshuf -n 1
+}
+
+function com() {
+  comment=$1
+  if [[ $1 == "" ]]; then
+    comment=$(quoute)
+  fi
+
+  git add . && git commit -am $comment
+}
+
+alias ll="ls -lh"
+alias la="ls -lah"
+alias s="cd ~/apps"
+alias ..="cd ../"
+alias ...="cd ../../"
+alias d="cd ~/Downloads"
+alias b="bundle exec"
+alias gam="git add -A .; git commit -a --amend --no-edit"
+alias gdm="git diff master"
+alias gdn="git diff master --name-only"
