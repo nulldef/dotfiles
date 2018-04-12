@@ -16,6 +16,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -40,6 +42,24 @@ set splitright
 set laststatus=2
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set cursorline
+set ttyfast                   " Claim we have a fast terminal<Paste>
+set ttimeout                  " Time out on keycodes
+set ttimeoutlen=0             " Process keycodes immediately
+set nolazyredraw              " Disable lazy redraw, this causes issues in terminal
+set autoread                  " Autoread the file when changed from the outside
+set autowriteall              " Autowrite file on certain events, line :next, :make, etc.
+set history=1000              " Number of commands and search queries to remember
+set undofile                  " Save undo history across sessions
+set undolevels=1000           " Number of undo levels to store
+set undodir=~/.dotfiles/vim/.undo   " Where to store the undo file
+set spelllang=ru,en
+
+autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal wrap linebreak spell
+
+" Don't show cursor line when we are in insert mode, show it otherwise
+autocmd WinLeave,InsertEnter * set nocursorline
+autocmd WinEnter,InsertLeave * set cursorline
 
 nnoremap <Leader><Left> <C-W>h
 nnoremap <Leader><Up> <C-W>j
@@ -48,9 +68,21 @@ nnoremap <Leader><Right> <C-W>l
 nnoremap $ g_
 noremap ff ^
 map fx :ALEFix<CR>
+noremap F $
 map qq :bd<CR>
 imap jj <Esc>
 cnoremap <expr> %% expand('%:h').'/'
+
+" Tab autocompletes when cursor is after a symbol, indents otherwise
+function! ProcessTab()
+	let col = col('.') - 1
+	if !col || getline('.')[col - 1] !~ '\k'
+		return "\<tab>"
+	else
+		return "\<c-n>"
+	endif
+endfunction
+inoremap <silent> <tab> <c-r>=ProcessTab()<cr>
 
 " Vim-test
 map <Leader>t :TestFile<CR>
@@ -87,5 +119,7 @@ let g:ale_linters = {
 \}
 
 " CtrlP
-let g:ctrlp_user_command = 'cd %s && git ls-files -co --exclude-standard'
+" let g:ctrlp_user_command = 'cd %s && git ls-files -co --exclude-standard'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
 map <Leader>p :CtrlP<CR>
