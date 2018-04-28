@@ -18,6 +18,7 @@ Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'slim-template/vim-slim'
 
 call plug#end()
 

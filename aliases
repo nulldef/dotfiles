@@ -22,7 +22,7 @@ function quoute () {
 }
 
 function com() {
-  comment=$1
+  comment=$@
   if [[ $1 == "" ]]; then
     comment=$(quoute)
   fi
