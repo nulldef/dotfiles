@@ -21,7 +21,7 @@ function quoute () {
   echo $_quoutes | gshuf -n 1
 }
 
-function com() {
+function git_commit() {
   comment=$@
   if [[ $1 == "" ]]; then
     comment=$(quoute)
@@ -41,3 +41,4 @@ alias gam="git add -A .; git commit -a --amend --no-edit"
 alias gdm="git diff master"
 alias gdn="git diff master --name-only"
 alias v="nvim"
+alias com="noglob git_commit"
