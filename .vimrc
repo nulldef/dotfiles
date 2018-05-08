@@ -19,6 +19,7 @@ Plug 'aklt/plantuml-syntax'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 
