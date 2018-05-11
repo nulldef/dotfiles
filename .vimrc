@@ -77,6 +77,8 @@ cnoremap <expr> %% expand('%:h').'/'
 nmap <Leader>] :bn<CR>
 nmap <Leader>[ :bp<CR>
 imap bp binding.pry<ESC>
+nmap <S-Up> 10gk
+nmap <S-Down> 10gj
 
 " Tab autocompletes when cursor is after a symbol, indents otherwise
 function! ProcessTab()
