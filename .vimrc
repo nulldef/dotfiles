@@ -55,6 +55,7 @@ set undofile                  " Save undo history across sessions
 set undolevels=1000           " Number of undo levels to store
 set undodir=~/.dotfiles/vim/.undo   " Where to store the undo file
 set spelllang=ru,en
+set list
 
 autocmd FileType gitcommit setlocal spell
 autocmd FileType markdown setlocal wrap linebreak spell
