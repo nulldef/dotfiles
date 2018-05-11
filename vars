@@ -5,5 +5,5 @@ export LC_ALL=en_US.UTF-8
 export LC_NUMERIC="en_US.UTF-8"
 export EDITOR='nvim'
 export PAGER=less
-export LESS="-iMSx4r -FX"
+export LESS="-iMSx4r -FX -+e -+E"
 export MORE="-eirMX"
