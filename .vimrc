@@ -65,6 +65,8 @@ autocmd FileType markdown setlocal wrap linebreak spell
 autocmd WinLeave,InsertEnter * set nocursorline
 autocmd WinEnter,InsertLeave * set cursorline
 
+au BufWritePost *.js,*.rb silent! !ctags 2> /dev/null &
+
 nnoremap <Leader><Left> <C-W>h
 nnoremap <Leader><Up> <C-W>j
 nnoremap <Leader><Down> <C-W>k
