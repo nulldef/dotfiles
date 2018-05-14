@@ -20,6 +20,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
 Plug 'chr4/nginx.vim'
+Plug 'roman/golden-ratio'
 
 call plug#end()
 
