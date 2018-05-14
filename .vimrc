@@ -94,22 +94,6 @@ function! ProcessTab()
 endfunction
 inoremap <silent> <tab> <c-r>=ProcessTab()<cr>
 
-function! UseTags()
- if filereadable("tags")
-   echo "Using ./tags file"
-   set tags=./tags
- else
-   echo "Tags file not found"
- endif
-endfunction
-autocmd VimEnter * call UseTags()
-
-function! GenTags()
- echo "Generation tags file..."
- !ctags -R --exclude=node_modules --exclude=.git
-endfunction
-nmap <Leader>q :call GenTags()<CR>
-
 " Vim-test
 map <Leader>t :TestFile<CR>
 map <Leader>n :TestNearest<CR>
