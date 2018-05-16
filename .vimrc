@@ -21,6 +21,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
 Plug 'chr4/nginx.vim'
 Plug 'roman/golden-ratio'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -141,8 +142,11 @@ let g:ale_linters = {
 \}
 
 " CtrlP
-" let g:ctrlp_user_command = 'cd %s && git ls-files -co --exclude-standard'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_user_command = 'rg --files'
 let g:ctrlp_use_caching = 0
 map <Leader>p :CtrlP<CR>
 map <Leader>P :CtrlPBuffer<CR>
+
+" ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+nmap <Leader>a :Ack<Space>
