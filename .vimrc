@@ -68,6 +68,14 @@ autocmd WinEnter,InsertLeave * set cursorline
 
 au BufWritePost *.js,*.rb silent! !ctags 2> /dev/null &
 
+function! BufOnly()
+  let curr = bufnr("%")
+  let last = bufnr("$")
+
+  if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
+  if curr < last | silent! execute (curr+1).",".last."bd" | endif
+endfunction
+
 nnoremap <Leader><Left> <C-W>h
 nnoremap <Leader><Up> <C-W>j
 nnoremap <Leader><Down> <C-W>k
@@ -77,7 +85,7 @@ noremap ff ^
 map fx :ALEFix<CR>
 noremap F $
 nmap qq :bd<CR>
-nmap QQ :%bd | e#<CR>
+nmap QQ :call BufOnly()<CR>
 imap jj <Esc>
 cnoremap <expr> %% expand('%:h').'/'
 nmap <Leader>] :bn<CR>
@@ -89,12 +97,12 @@ nmap <S-Down> 10gj
 
 " Tab autocompletes when cursor is after a symbol, indents otherwise
 function! ProcessTab()
-	let col = col('.') - 1
-	if !col || getline('.')[col - 1] !~ '\k'
-		return "\<tab>"
-	else
-		return "\<c-n>"
-	endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-n>"
+  endif
 endfunction
 inoremap <silent> <tab> <c-r>=ProcessTab()<cr>
 
