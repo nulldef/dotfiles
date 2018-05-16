@@ -77,6 +77,7 @@ noremap ff ^
 map fx :ALEFix<CR>
 noremap F $
 map qq :bd<CR>
+map QQ :%bd | e#<CR>
 imap jj <Esc>
 cnoremap <expr> %% expand('%:h').'/'
 nmap <Leader>] :bn<CR>
