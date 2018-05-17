@@ -4,8 +4,8 @@ function sql() {
   db="db" 
   if [[ $1 != "" ]]; then
     db=$1
-  fi  
-    
+  fi
+
   env="development"
   if [[ $2 != "" ]]; then
     env=$2
@@ -28,6 +28,15 @@ function git_commit() {
   fi
 
   git add . && git commit -am $comment
+}
+
+function nspec() {
+  eval rspec $*
+  if [[ $? -ne 0 ]]; then
+    notify -t "Rspec" -m "Failed" -s Hero
+  else
+    notify -t "Rspec" -m "Success" -s Submarine
+  fi
 }
 
 alias ll="ls -lh"

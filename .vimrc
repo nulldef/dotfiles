@@ -93,8 +93,8 @@ nmap <Leader>] :bn<CR>
 nmap <Leader>[ :bp<CR>
 imap bp binding.pry<ESC>
 imap log<tab> console.log()<Left>
-nmap <S-Up> 10gk
-nmap <S-Down> 10gj
+map <S-Up> 10gk
+map <S-Down> 10gj
 
 " Tab autocompletes when cursor is after a symbol, indents otherwise
 function! ProcessTab()
