@@ -149,4 +149,4 @@ map <Leader>P :CtrlPBuffer<CR>
 
 " ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
-nmap <Leader>a :Ack<Space>
+nmap <Leader>a :Ack!<Space>
