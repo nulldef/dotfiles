@@ -133,7 +133,7 @@ map <Leader>f :NERDTreeFind<CR>
 
 " Ale
 let g:ale_fixers = {
-\   'javascript': ['eslint --fix'],
+\   'javascript': ['prettier', 'eslint'],
 \   'ruby': ['rubocop'],
 \}
 let g:ale_linters = {
