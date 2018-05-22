@@ -22,6 +22,7 @@ Plug 'slim-template/vim-slim'
 Plug 'chr4/nginx.vim'
 Plug 'roman/golden-ratio'
 Plug 'mileszs/ack.vim'
+Plug 'matze/vim-move'
 
 call plug#end()
 
@@ -150,3 +151,9 @@ map <Leader>P :CtrlPBuffer<CR>
 " ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <Leader>a :Ack!<Space>
+
+" vim-move
+vmap <c-down> <plug>MoveBlockDown
+vmap <c-up> <plug>MoveBlockUp
+nmap <c-down> <plug>MoveLineDown
+nmap <c-up> <plug>MoveLineUp
