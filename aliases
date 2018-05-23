@@ -1,4 +1,4 @@
-# vim: set syntax=sh
+# vim: set syntax=sh;
 
 function sql() {
   db="db" 
@@ -51,3 +51,11 @@ alias gdm="git diff master"
 alias gdn="git diff master --name-only"
 alias v="nvim"
 alias com="noglob git_commit"
+
+# hanami
+alias h="bundle exec hanami"
+alias ht="HANAMI_ENV=test bundle exec hanami"
+function hth() {
+  bundle exec hanami $*
+  HANAMI_ENV=test bundle exec hanami $*
+}
