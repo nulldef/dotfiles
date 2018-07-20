@@ -51,6 +51,7 @@ alias gdm="git diff master"
 alias gdn="git diff master --name-only"
 alias v="nvim"
 alias com="noglob git_commit"
+alias did="vim +'normal Go' +'r!date' ~/did.txt"
 
 # hanami
 alias h="bundle exec hanami"
