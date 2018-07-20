@@ -92,7 +92,7 @@ imap jj <Esc>
 cnoremap <expr> %% expand('%:h').'/'
 nmap <Leader>] :bn<CR>
 nmap <Leader>[ :bp<CR>
-imap bp binding.pry<ESC>
+imap bp<Tab> binding.pry<ESC>
 imap log<tab> console.log()<Left>
 map <S-Up> 10gk
 map <S-Down> 10gj
