@@ -23,6 +23,7 @@ Plug 'chr4/nginx.vim'
 Plug 'roman/golden-ratio'
 Plug 'mileszs/ack.vim'
 Plug 'matze/vim-move'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
