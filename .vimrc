@@ -23,7 +23,8 @@ Plug 'chr4/nginx.vim'
 Plug 'roman/golden-ratio'
 Plug 'mileszs/ack.vim'
 Plug 'matze/vim-move'
-Plug 'posva/vim-vue'
+Plug 'xolox/vim-notes'
+Plug 'xolox/vim-misc'
 
 call plug#end()
 
@@ -91,8 +92,8 @@ nmap qq :bd<CR>
 nmap QQ :call BufOnly()<CR>
 imap jj <Esc>
 cnoremap <expr> %% expand('%:h').'/'
-nmap <Leader>] :bn<CR>
-nmap <Leader>[ :bp<CR>
+nmap <Leader>q :bn<CR>
+nmap <Leader>w :bp<CR>
 imap bp<Tab> binding.pry<ESC>
 imap log<tab> console.log()<Left>
 map <S-Up> 10gk
@@ -158,3 +159,6 @@ vmap <c-down> <plug>MoveBlockDown
 vmap <c-up> <plug>MoveBlockUp
 nmap <c-down> <plug>MoveLineDown
 nmap <c-up> <plug>MoveLineUp
+
+" vim-notes
+let g:notes_directories = ['~/Notes']
