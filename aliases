@@ -15,16 +15,10 @@ function sql() {
   PAGER=less LESS="-ierRMSx4 -FX" psql -Upostgres $database
 }
 
-function quoute () {
-  _quoutes="It works on my machine."
-
-  echo $_quoutes | gshuf -n 1
-}
-
 function git_commit() {
   comment=$@
   if [[ $1 == "" ]]; then
-    comment=$(quoute)
+    comment="dev"
   fi
 
   git add . && git commit -am $comment
@@ -51,15 +45,6 @@ alias gdm="git diff master"
 alias gdn="git diff master --name-only"
 alias v="nvim"
 alias com="noglob git_commit"
-alias did="vim +'normal Go' +'r!date' ~/did.txt"
 alias bo="EDITOR=subl bundle open"
 alias go="EDITOR=subl gem open"
 alias no="EDITOR=subl npm edit"
-
-# hanami
-alias h="bundle exec hanami"
-alias ht="HANAMI_ENV=test bundle exec hanami"
-function hth() {
-  bundle exec hanami $*
-  HANAMI_ENV=test bundle exec hanami $*
-}
