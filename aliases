@@ -1,7 +1,7 @@
 # vim: set syntax=sh;
 
 function sql() {
-  db="db" 
+  db="db"
   if [[ $1 != "" ]]; then
     db=$1
   fi
@@ -48,3 +48,14 @@ alias com="noglob git_commit"
 alias bo="EDITOR=subl bundle open"
 alias go="EDITOR=subl gem open"
 alias no="EDITOR=subl npm edit"
+alias lintjs="git diff master --relative --name-only | ag 'js$' | xargs eslint --fix"
+
+function note {
+  filename="$HOME/note"
+  datestring="-- [$(date +"%a, %d %b %Y")] --"
+  if ! grep -Fxq "'$datestring'" $filename
+  then
+    echo "$datestring\n\n" >> $filename
+  fi
+  v "+normal G$" +startinsert $filename
+}

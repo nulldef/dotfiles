@@ -25,6 +25,7 @@ Plug 'mileszs/ack.vim'
 Plug 'matze/vim-move'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
