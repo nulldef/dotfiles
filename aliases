@@ -48,7 +48,20 @@ alias com="noglob git_commit"
 alias bo="EDITOR=subl bundle open"
 alias go="EDITOR=subl gem open"
 alias no="EDITOR=subl npm edit"
-alias lintjs="git diff master --relative --name-only | ag 'js$' | xargs eslint --fix"
+alias kov="COVER=1 nspec --no-fail-fast"
+alias gl="git pull --prune"
+alias gb="git branch -vv"
+
+macdown() {
+  "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
+}
+
+function gmm() {
+  git checkout master
+  git pull origin master
+  git checkout @{-1}
+  git merge master --no-edit
+}
 
 function note {
   filename="$HOME/note"
