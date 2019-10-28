@@ -7,3 +7,4 @@ export EDITOR='nvim'
 export PAGER=less
 export LESS="-iMSx4r -FX -+e -+E"
 export MORE="-eirMX"
+export DISABLE_SPRING=true
