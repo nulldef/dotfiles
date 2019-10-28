@@ -52,8 +52,8 @@ alias lintjs="git diff master --relative --name-only | ag 'js$' | xargs eslint -
 
 function note {
   filename="$HOME/note"
-  datestring="-- [$(date +"%a, %d %b %Y")] --"
-  if ! grep -Fxq "'$datestring'" $filename
+  datestring="[$(date +"%a, %d %b %Y")]"
+  if ! grep -Fxq "$datestring" $filename
   then
     echo "$datestring\n\n" >> $filename
   fi
