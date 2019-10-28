@@ -1,0 +1,35 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"10% Too Dull for My Tastes Color Scheme",
+		"A File Icon",
+		"AdvancedNewFile",
+		"Babel",
+		"BracketHighlighter",
+		"Case Conversion",
+		"Clipboard Manager",
+		"Color Highlight",
+		"DocBlockr",
+		"Dockerfile Syntax Highlighting",
+		"EasyMotion",
+		"Emmet",
+		"Git",
+		"Markdown Table Formatter",
+		"Naomi",
+		"Oceanic Next Color Scheme",
+		"Origami",
+		"Package Control",
+		"Pretty JSON",
+		"Sass",
+		"SideBarEnhancements",
+		"SqlBeautifier",
+		"SQLTools",
+		"Sync Settings",
+		"SyncedSideBar",
+		"Theme - Spacegray"
+	]
+}
