@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-console.log("__KEK__", ${0});
+console.log("__KEK__${1}", ${0});
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>log</tabTrigger>
