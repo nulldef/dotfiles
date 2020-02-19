@@ -51,6 +51,7 @@ alias no="EDITOR=subl npm edit"
 alias kov="COVER=1 nspec --no-fail-fast"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
+alias tenv="RAILS_ENV=test"
 
 macdown() {
   "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
@@ -68,7 +69,7 @@ function note {
   datestring="[$(date +"%a, %d %b %Y")]"
   if ! grep -Fxq "$datestring" $filename
   then
-    echo "$datestring\n\n" >> $filename
+    echo "\n$datestring\n\n" >> $filename
   fi
   v "+normal G$" +startinsert $filename
 }

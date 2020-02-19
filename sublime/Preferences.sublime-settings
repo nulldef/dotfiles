@@ -32,11 +32,12 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"zzz A File Icon zzz"
 	],
 	"index_exclude_patterns":
 	[
 		"*.log",
-		"*coverage*"
+		"coverage/*"
 	],
 	"rulers":
 	[
