@@ -18,7 +18,7 @@ function sql() {
 function git_commit() {
   comment=$@
   if [[ $1 == "" ]]; then
-    comment="dev"
+    comment="$(fortune -n short)"
   fi
 
   git add . && git commit -am $comment
