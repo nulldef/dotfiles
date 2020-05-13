@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+import React from "react"
+
+export default class ${1:Component} extends React.Component {
+  render () {
+    return (
+      "${1:Component} will be here!"
+    )
+  }
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>cc</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>
