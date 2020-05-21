@@ -3,7 +3,7 @@
 import React from "react"
 
 const ${1:Component} = () => {
-  return "${1:Component} will be here!"
+  return ${0:"${1:Component} will be here!"}
 }
 
 export default ${1:Component}

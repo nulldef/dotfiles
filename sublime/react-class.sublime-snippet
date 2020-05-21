@@ -5,7 +5,7 @@ import React from "react"
 export default class ${1:Component} extends React.Component {
   render () {
     return (
-      "${1:Component} will be here!"
+      ${0:"${1:Component} will be here!"}
     )
   }
 }
