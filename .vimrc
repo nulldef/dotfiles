@@ -159,3 +159,6 @@ nmap <c-up> <plug>MoveLineUp
 
 " vim-notes
 let g:notes_directories = ['~/Notes']
+
+" copy all file content to clipboard
+map cp ggVG:w !pbcopy<CR><CR>

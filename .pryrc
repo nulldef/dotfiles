@@ -5,3 +5,4 @@ Pry.config.history_file = "~/.pry_history"
 Pry.history.load
 
 DB.logger = Logger.new(STDOUT) if defined?(DB)
+Rails.logger = Logger.new(STDOUT) if defined?(Rails)
