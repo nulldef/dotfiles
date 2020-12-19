@@ -26,7 +26,9 @@
 		"*coverage*",
 		"dist/",
 		".nyc*",
-		".vscode"
+		".vscode",
+		"deps/",
+		"_build/"
 	],
 	"font_size": 13,
 	"highlight_line": true,
