@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"10% Too Dull for My Tastes Color Scheme",
 		"A File Icon",
 		"AdvancedNewFile",
 		"AutoFileName",
@@ -14,10 +13,8 @@
 		"Case Conversion",
 		"Clipboard Manager",
 		"Color Highlight",
-		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
 		"EasyMotion",
-		"Elixir",
 		"Emmet",
 		"Git",
 		"Indent XML",
@@ -28,11 +25,11 @@
 		"Origami",
 		"Package Control",
 		"Pretty JSON",
+		"Ruby Slim",
 		"Sass",
 		"SideBarEnhancements",
 		"SqlBeautifier",
 		"SQLTools",
-		"Sync Settings",
 		"SyncedSideBar",
 		"Theme - Spacegray"
 	]
