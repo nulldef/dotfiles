@@ -11,19 +11,11 @@
 	],
 	"folder_exclude_patterns":
 	[
-		".idea/",
-		"tmp/",
-		"*/spec_statuses/",
-		"dist/",
-		".nyc*",
-		".vscode",
-		"deps/",
-		"_build/"
 		".git",
 		"node_modules",
 		"coverage"
 	],
-	"font_size": 14,
+	"font_size": 13,
 	"hardware_acceleration": "opengl",
 	"highlight_line": true,
 	"ignored_packages":
