@@ -6,3 +6,8 @@ Pry.history.load
 
 DB.logger = Logger.new(STDOUT) if defined?(DB)
 Rails.logger = Logger.new(STDOUT) if defined?(Rails)
+HttpLog.config.logger = Logger.new(STDOUT) if defined?(HttpLog)
+
+def _m(instance)
+  instance.methods - Object.instance_methods
+end
