@@ -11,6 +11,14 @@
 	],
 	"folder_exclude_patterns":
 	[
+		".idea/",
+		"tmp/",
+		"*/spec_statuses/",
+		"dist/",
+		".nyc*",
+		".vscode",
+		"deps/",
+		"_build/"
 		".git",
 		"node_modules",
 		"coverage"
