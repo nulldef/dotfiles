@@ -16,5 +16,6 @@
   { "keys": ["super+shift+i"], "command": "side_bar_copy_name" },
   { "keys": ["super+alt+i"], "command": "copy_filepath_with_line_numbers" },
   { "keys": ["super+shift+up"], "command": "swap_line_up" },
-  { "keys": ["super+shift+down"], "command": "swap_line_down" }
+  { "keys": ["super+shift+down"], "command": "swap_line_down" },
+  { "keys": ["super+k", "super+k"], "command": "dash_doc"}
 ]
