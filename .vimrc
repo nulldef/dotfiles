@@ -163,3 +163,6 @@ let g:notes_directories = ['~/Notes']
 " copy all file content to clipboard
 map cp :w !pbcopy<CR><CR>
 map ccp ggVG cp
+
+" run currenct file as ruby script
+map <Leader>r :!ruby %<CR>
