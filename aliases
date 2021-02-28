@@ -102,3 +102,8 @@ function note {
   fi
   v "+normal G$" +startinsert $filename
 }
+
+# Hanami
+alias hc="bundle exec hanami console"
+alias hs="bundle exec hanami server"
+alias h="bundle exec hanami"
