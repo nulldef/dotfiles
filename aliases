@@ -1,5 +1,11 @@
 # vim: set syntax=sh;
 
+function kcli() {
+  pod=$1
+  shift
+  kubectl exec -it $pod -- sh $@
+}
+
 function sql() {
   db="db"
   if [[ $1 != "" ]]; then
@@ -91,14 +97,4 @@ function gmm() {
   git pull origin master
   git checkout @{-1}
   git merge master --no-edit
-}
-
-function note {
-  filename="$HOME/note"
-  datestring="[$(date +"%a, %d %b %Y")]"
-  if ! grep -Fxq "$datestring" $filename
-  then
-    echo "\n$datestring\n\n" >> $filename
-  fi
-  v "+normal G$" +startinsert $filename
 }
