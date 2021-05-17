@@ -98,3 +98,8 @@ function gmm() {
   git checkout @{-1}
   git merge master --no-edit
 }
+
+# Hanami
+alias hc="bundle exec hanami console"
+alias hs="bundle exec hanami server"
+alias h="bundle exec hanami"
