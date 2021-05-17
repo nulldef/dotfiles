@@ -3,4 +3,3 @@
 .DS_Store
 *.rdb
 yarn-error.log
-.crowdin-config.json

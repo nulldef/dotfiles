@@ -13,9 +13,10 @@
 	[
 		".git",
 		"node_modules",
-		"coverage"
+		"coverage",
+		"dist"
 	],
-	"font_size": 13,
+	"font_size": 14,
 	"hardware_acceleration": "opengl",
 	"highlight_line": true,
 	"ignored_packages":
