@@ -1,10 +1,4 @@
 [
-  { "keys": ["ctrl+w"], "command": "close" },
-  { "keys": ["ctrl+shift+w"], "command": "close_others" },
-  { "keys": ["ctrl+a"], "command": "select_all" },
-  { "keys": ["ctrl+q"], "command": "goto_definition" },
-
-
   { "keys": ["super+w"], "command": "close" },
   { "keys": ["super+b"], "command": "git_blame" },
   { "keys": ["super+shift+w"], "command": "close_others" },
@@ -12,10 +6,5 @@
   { "keys": ["super+q"], "command": "goto_definition" },
   { "keys": ["super+i"], "command": "copy_path" },
   { "keys": ["super+k", "super+d"], "command": "delete_opened_file" },
-  { "keys": ["super+k", "super+p"], "command": "show_path" },
-  { "keys": ["super+shift+i"], "command": "side_bar_copy_name" },
-  { "keys": ["super+alt+i"], "command": "copy_filepath_with_line_numbers" },
-  { "keys": ["super+shift+up"], "command": "swap_line_up" },
-  { "keys": ["super+shift+down"], "command": "swap_line_down" },
-  { "keys": ["super+k", "super+k"], "command": "dash_doc"}
+  { "keys": ["super+shift+i"], "command": "side_bar_copy_name" }
 ]
