@@ -87,6 +87,7 @@ alias gl="git pull --prune"
 alias gb="git branch -vv"
 alias tenv="RAILS_ENV=test"
 alias k="kubectl"
+alias ka="kubectl apply -f"
 
 macdown() {
   "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
