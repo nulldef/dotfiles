@@ -12,8 +12,10 @@
 		"Dockerfile Syntax Highlighting",
 		"Emmet",
 		"Git",
+		"Naomi",
 		"Package Control",
 		"Pretty JSON",
+		"Ruby Slim",
 		"Sass",
 		"SideBarEnhancements",
 		"SqlBeautifier",
@@ -21,4 +23,3 @@
 		"Theme - Spacegray",
 	],
 }
-

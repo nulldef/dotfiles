@@ -21,7 +21,7 @@
   ],
   "rulers": [100],
   "vintage_start_in_command_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": false,
   "show_full_path": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
@@ -29,5 +29,5 @@
   "color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
   "theme": "Spacegray.sublime-theme",
   "show_encoding": true,
-  "hardware_acceleration": "opengl"
+  "hardware_acceleration": "opengl",
 }
