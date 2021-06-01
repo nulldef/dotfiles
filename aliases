@@ -86,8 +86,15 @@ alias kov="COVER=1 nspec --no-fail-fast"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
 alias tenv="RAILS_ENV=test"
+
+# Kubernetes
 alias k="kubectl"
 alias ka="kubectl apply -f"
+alias kp="kubectl get pods"
+alias ks="kubectl get services"
+alias kss="kubectl get secrets"
+alias kg="kubectl get"
+alias kl="kubectl logs"
 
 macdown() {
   "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
