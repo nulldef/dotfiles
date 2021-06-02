@@ -89,8 +89,10 @@ alias tenv="RAILS_ENV=test"
 
 # Kubernetes
 alias k="kubectl"
+alias kx="kubectl config get-contexts"
 alias ka="kubectl apply -f"
 alias kp="kubectl get pods"
+alias ki="kubectl get ingress"
 alias ks="kubectl get services"
 alias kss="kubectl get secrets"
 alias kg="kubectl get"
