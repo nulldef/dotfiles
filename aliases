@@ -30,15 +30,6 @@ function git_commit() {
   git add . && git commit -am $comment
 }
 
-function nspec() {
-  eval rspec $*
-  if [[ $? -ne 0 ]]; then
-    notify -t "Rspec" -m "Failed" -s Hero
-  else
-    notify -t "Rspec" -m "Success" -s Submarine
-  fi
-}
-
 function ggmom() {
   branches=()
   eval "$(git for-each-ref --shell --format='branches+=(%(refname:lstrip=2))' refs/heads/)"
@@ -82,7 +73,7 @@ alias v="nvim"
 alias com="noglob git_commit"
 alias bo="EDITOR=subl bundle open"
 alias no="EDITOR=subl npm edit"
-alias kov="COVER=1 nspec --no-fail-fast"
+alias kov="COVER=1 rspec --no-fail-fast"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
 alias tenv="RAILS_ENV=test"
