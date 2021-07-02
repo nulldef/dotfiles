@@ -58,6 +58,28 @@ function ggmom() {
   git checkout master
 }
 
+macdown() {
+  "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
+}
+
+function gmm() {
+  git checkout master
+  git pull origin master
+  git checkout @{-1}
+  git merge master --no-edit
+}
+
+function rails-reset-db() {
+  envs=(development test)
+  
+  for env in ${envs[@]}
+  do
+    cmd="RAILS_ENV=$env rake db:drop db:create db:migrate db:seed"
+    echo "$cmd"
+    eval "$cmd"
+  done
+}
+
 alias ll="ls -lh"
 alias la="ls -lah"
 alias s="cd ~/apps"
@@ -88,17 +110,6 @@ alias ks="kubectl get services"
 alias kss="kubectl get secrets"
 alias kg="kubectl get"
 alias kl="kubectl logs"
-
-macdown() {
-  "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
-}
-
-function gmm() {
-  git checkout master
-  git pull origin master
-  git checkout @{-1}
-  git merge master --no-edit
-}
 
 # Hanami
 alias hc="bundle exec hanami console"
