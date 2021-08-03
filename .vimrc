@@ -13,18 +13,14 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
 Plug 'roman/golden-ratio'
 Plug 'mileszs/ack.vim'
-Plug 'matze/vim-move'
-Plug 'xolox/vim-notes'
-Plug 'xolox/vim-misc'
 Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
 " global config
-set number
+set relativenumber
 let mapleader = ","
 set encoding=utf-8
 set fileencoding=utf-8
@@ -150,15 +146,6 @@ map <Leader>P :CtrlPBuffer<CR>
 " ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <Leader>a :Ack!<Space>
-
-" vim-move
-vmap <c-down> <plug>MoveBlockDown
-vmap <c-up> <plug>MoveBlockUp
-nmap <c-down> <plug>MoveLineDown
-nmap <c-up> <plug>MoveLineUp
-
-" vim-notes
-let g:notes_directories = ['~/Notes']
 
 " copy all file content to clipboard
 map cp :w !pbcopy<CR><CR>
