@@ -1,0 +1,10 @@
+{
+  "rules": [
+  {
+    "name": "Comment",
+    "scope": "comment",
+    "font_style": "italic",
+    "foreground": "#a1abb4"
+  }
+  ]
+}
