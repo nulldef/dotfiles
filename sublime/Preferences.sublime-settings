@@ -12,6 +12,8 @@
   [
     ".git",
     "node_modules",
+    "deps",
+    "_build",
     "coverage"
   ],
   "font_size": 13,
