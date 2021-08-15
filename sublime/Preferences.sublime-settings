@@ -22,7 +22,7 @@
   ],
   "rulers": [100],
   "vintage_start_in_command_mode": true,
-  "relative_line_numbers": false,
+  "relative_line_numbers": true,
   "show_full_path": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
