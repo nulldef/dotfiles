@@ -9,3 +9,6 @@ export LESS="-iMSx4r -FX -+e -+E"
 export MORE="-eirMX"
 export DISABLE_SPRING=true
 export PATH="$HOME/bin:$PATH"
+
+# iex history
+export ERL_AFLAGS="-kernel shell_history enabled"
