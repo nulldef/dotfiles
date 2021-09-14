@@ -99,7 +99,7 @@ alias no="EDITOR=subl npm edit"
 alias kov="COVER=1 rspec --no-fail-fast"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
-alias tenv="RAILS_ENV=test"
+alias tenv="RAILS_ENV=test MIX_ENV=test"
 
 # Kubernetes
 alias k="kubectl"
