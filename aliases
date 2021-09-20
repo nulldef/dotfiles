@@ -111,6 +111,7 @@ alias ks="kubectl get services"
 alias kss="kubectl get secrets"
 alias kg="kubectl get"
 alias kl="kubectl logs"
+alias kd="kubectl describe"
 
 # Hanami
 alias hc="bundle exec hanami console"
