@@ -4,7 +4,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'ajh17/spacegray.vim'
+Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'janko-m/vim-test'
 Plug 'w0rp/ale'
@@ -18,6 +18,9 @@ Plug 'mileszs/ack.vim'
 Plug 'leafgarland/typescript-vim'
 
 call plug#end()
+
+" set color theme
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " global config
 set relativenumber
@@ -117,11 +120,6 @@ let g:javascript_plugin_flow = 1
 " JSX
 let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 0
-
-" Spacegray
-let g:spacegray_underline_search = 1
-let g:spacegray_use_italics = 1
-colorscheme spacegray
 
 " Nerd tree
 map <Leader>b :NERDTreeToggle<CR>
