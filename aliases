@@ -112,6 +112,7 @@ alias kss="kubectl get secrets"
 alias kg="kubectl get"
 alias kl="kubectl logs"
 alias kd="kubectl describe"
+alias kpw="watch -n1 'kubectl get pods'"
 
 # Hanami
 alias hc="bundle exec hanami console"
