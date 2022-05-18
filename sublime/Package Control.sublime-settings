@@ -9,10 +9,12 @@
 		"AdvancedNewFile",
 		"AutoFileName",
 		"ayu",
+		"Better CoffeeScript",
 		"BracketHighlighter",
 		"Case Conversion",
 		"Dockerfile Syntax Highlighting",
 		"EasyMotion",
+		"EditorConfig",
 		"EJS",
 		"Elixir",
 		"Emmet",
@@ -30,5 +32,10 @@
 		"SqlBeautifier",
 		"SyncedSideBar",
 		"Theme - Spacegray",
+	],
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json",
+		"https://packagecontrol.io/channel.json"
 	],
 }
