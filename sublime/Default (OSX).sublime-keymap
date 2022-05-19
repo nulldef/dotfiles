@@ -1,8 +1,7 @@
 [
-  { "keys": ["super+w"], "command": "close" },
+  { "keys": ["super+alt+q"], "command": "quit" },
   { "keys": ["super+b"], "command": "git_blame" },
   { "keys": ["super+shift+w"], "command": "close_others" },
-  { "keys": ["super+a"], "command": "select_all" },
   { "keys": ["super+q"], "command": "goto_definition" },
   { "keys": ["super+i"], "command": "copy_path" },
   { "keys": ["super+k", "super+d"], "command": "delete_opened_file" },

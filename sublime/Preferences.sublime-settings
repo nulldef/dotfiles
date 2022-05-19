@@ -1,34 +1,21 @@
 {
-  "drag_text": false,
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    ".DS_Store",
-    "*.sublime-workspace",
-    "*.log"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".git",
-    "node_modules",
-    "deps",
-    "_build",
-    "coverage"
-  ],
-  "font_size": 13,
-  "highlight_line": true,
-  "ignored_packages": [
-  ],
-  "rulers": [100],
-  "vintage_start_in_command_mode": true,
-  "relative_line_numbers": false,
-  "show_full_path": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
-  "color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
-  "theme": "ayu-mirage.sublime-theme",
-  "show_encoding": true,
-  "hardware_acceleration": "opengl",
+	"ignored_packages": [
+	],
+	"theme": "ayu-mirage.sublime-theme",
+	"color_scheme": "ayu-mirage.sublime-color-scheme",
+	// ayu color scheme related setting
+	"ui_wide_scrollbars":       true,
+	"drag_text": false,
+	"draw_white_space": "all",
+	"draw_unicode_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"highlight_line": true,
+	"rulers": [100],
+	"vintage_start_in_command_mode": true,
+	"show_full_path": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"show_encoding": true,
+	"font_size": 13,
 }

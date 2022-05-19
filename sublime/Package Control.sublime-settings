@@ -6,36 +6,17 @@
 	"installed_packages":
 	[
 		"A File Icon",
-		"AdvancedNewFile",
 		"AutoFileName",
 		"ayu",
-		"Better CoffeeScript",
+		"Babel",
 		"BracketHighlighter",
 		"Case Conversion",
 		"Dockerfile Syntax Highlighting",
-		"EasyMotion",
-		"EditorConfig",
-		"EJS",
-		"Elixir",
 		"Emmet",
 		"Git",
-		"LESS",
-		"Markdown Table Formatter",
-		"Naomi",
 		"nginx",
 		"Package Control",
-		"Pretty JSON",
-		"Protobuf Syntax Hightlighting",
-		"Ruby Slim",
-		"Sass",
 		"SideBarEnhancements",
-		"SqlBeautifier",
 		"SyncedSideBar",
-		"Theme - Spacegray",
-	],
-	"channels":
-	[
-		"https://packagecontrol.io/channel_v3.json",
-		"https://packagecontrol.io/channel.json"
 	],
 }
