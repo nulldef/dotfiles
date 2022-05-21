@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"AdvancedNewFile",
 		"AutoFileName",
 		"ayu",
 		"Babel",
@@ -18,5 +19,6 @@
 		"Package Control",
 		"SideBarEnhancements",
 		"SyncedSideBar",
+		"Vue Syntax Highlight",
 	],
 }
