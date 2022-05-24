@@ -6,21 +6,6 @@ function kcli() {
   kubectl exec -it $pod -- sh $@
 }
 
-function sql() {
-  db="db"
-  if [[ $1 != "" ]]; then
-    db=$1
-  fi
-
-  env="development"
-  if [[ $2 != "" ]]; then
-    env=$2
-  fi
-
-  database="${db}_${env}"
-  PAGER=less LESS="-ierRMSx4 -FX" psql -Upostgres $database
-}
-
 function git_commit() {
   comment=$@
   if [[ $1 == "" ]]; then

@@ -18,4 +18,13 @@
 	"trim_trailing_white_space_on_save": true,
 	"show_encoding": true,
 	"font_size": 13,
+	"folder_exclude_patterns": [
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".Trash",
+		".Trash-*",
+		"node_modules"
+	],
 }
