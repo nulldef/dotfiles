@@ -15,54 +15,22 @@ function git_commit() {
   git add . && git commit -am $comment
 }
 
-function ggmom() {
-  branches=()
-  eval "$(git for-each-ref --shell --format='branches+=(%(refname:lstrip=2))' refs/heads/)"
-
-  git checkout master -q
-  git pull
-
-  for b in ${branches[@]}; do
-    if [[ "$b" == 'master' ]]
-    then
-      continue
-    fi
-
-    if [[ $(git branch -vv | grep gone | grep $b) ]]
-    then
-      echo "Remove gone branch $b"
-      git branch -D $b
-      continue
-    fi
-
-    git checkout $b -q
-    git merge master --no-edit -q
-    echo "Branch $b updated"
-  done
-
-  git checkout master
-}
-
 macdown() {
   "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
 }
 
 function gmm() {
-  git checkout master
-  git pull origin master
+  git checkout $(git_main_branch)
+  git pull origin $(git_main_branch)
   git checkout @{-1}
-  git merge master --no-edit
+  git merge $(git_main_branch) --no-edit
 }
 
-function rails-reset-db() {
-  envs=(development test)
-  
-  for env in ${envs[@]}
-  do
-    cmd="RAILS_ENV=$env rake db:drop db:create db:migrate db:seed"
-    echo "$cmd"
-    eval "$cmd"
-  done
+function gmd() {
+   git checkout $(git_develop_branch)
+   git pull
+   git checkout @{-1}
+   git merge $(git_develop_branch) --no-edit
 }
 
 alias ll="ls -lh"
