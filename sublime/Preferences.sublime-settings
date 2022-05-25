@@ -1,30 +1,30 @@
 {
-	"ignored_packages": [
-	],
-	"theme": "ayu-mirage.sublime-theme",
-	"color_scheme": "ayu-mirage.sublime-color-scheme",
-	// ayu color scheme related setting
-	"ui_wide_scrollbars":       true,
-	"drag_text": false,
-	"draw_white_space": "all",
-	"draw_unicode_white_space": "all",
-	"ensure_newline_at_eof_on_save": true,
-	"highlight_line": true,
-	"rulers": [100],
-	"vintage_start_in_command_mode": true,
-	"show_full_path": true,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"show_encoding": true,
-	"font_size": 13,
-	"folder_exclude_patterns": [
-		".svn",
-		".git",
-		".hg",
-		"CVS",
-		".Trash",
-		".Trash-*",
-		"node_modules"
-	],
+  "ignored_packages": [
+  ],
+  "theme": "ayu-mirage.sublime-theme",
+  "color_scheme": "ayu-mirage.sublime-color-scheme",
+  // ayu color scheme related setting
+  "ui_wide_scrollbars":       true,
+  "drag_text": false,
+  "draw_white_space": "all",
+  "draw_unicode_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "highlight_line": true,
+  "rulers": [100],
+  "vintage_start_in_command_mode": true,
+  "show_full_path": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "show_encoding": true,
+  "font_size": 13,
+  "folder_exclude_patterns": [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    ".Trash",
+    ".Trash-*",
+    "node_modules"
+  ],
 }
