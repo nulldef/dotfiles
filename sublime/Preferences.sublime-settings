@@ -4,7 +4,7 @@
   "theme": "ayu-mirage.sublime-theme",
   "color_scheme": "ayu-mirage.sublime-color-scheme",
   // ayu color scheme related setting
-  "ui_wide_scrollbars":       true,
+  "ui_wide_scrollbars": true,
   "drag_text": false,
   "draw_white_space": "all",
   "draw_unicode_white_space": "all",
@@ -18,6 +18,8 @@
   "trim_trailing_white_space_on_save": true,
   "show_encoding": true,
   "font_size": 13,
+  "close_windows_when_empty": false,
+  /*"word_wrap": false,*/
   "folder_exclude_patterns": [
     ".svn",
     ".git",
@@ -25,6 +27,7 @@
     "CVS",
     ".Trash",
     ".Trash-*",
-    "node_modules"
+    "node_modules",
+    "tmp"
   ],
 }

@@ -53,4 +53,9 @@
 		"yml",
 		"yml.dist"
 	],
+	"Ruby Slim":
+	[
+		"emblem",
+		"slim",
+	],
 }
