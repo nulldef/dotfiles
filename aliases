@@ -1,24 +1,10 @@
 # vim: set syntax=sh;
 
-function kcli() {
-  pod=$1
-  shift
-  kubectl exec -it $pod -- sh $@
-}
-
-function git_commit() {
-  comment=$@
-  if [[ $1 == "" ]]; then
-    comment="$(fortune -n short)"
-  fi
-
-  git add . && git commit -am $comment
-}
-
 macdown() {
   "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
 }
 
+# Git
 function gmm() {
   git checkout $(git_main_branch)
   git pull origin $(git_main_branch)
@@ -33,28 +19,28 @@ function gmd() {
    git merge $(git_develop_branch) --no-edit
 }
 
-alias ll="ls -lh"
-alias la="ls -lah"
-alias s="cd ~/apps"
-alias ..="cd ../"
-alias ...="cd ../../"
-alias d="cd ~/Downloads"
-alias b="bundle exec"
+function com() {
+  git add .
+  git commit -am $@
+}
+
 alias gca="git commit --amend"
 alias gam="git add -A .; git commit -a --amend --no-edit"
 alias gdm="git diff master"
 alias gdn="git diff master --name-status"
 alias gcob="git checkout @{-1}"
-alias v="nvim"
-alias com="noglob git_commit"
-alias bo="EDITOR=subl bundle open"
-alias no="EDITOR=subl npm edit"
-alias kov="COVER=1 rspec --no-fail-fast"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
-alias tenv="RAILS_ENV=test MIX_ENV=test"
+alias gdd="git diff $(git_develop_branch)"
+alias gddn="git diff $(git_develop_branch) --name-status"
 
 # Kubernetes
+function kcli() {
+  pod=$1
+  shift
+  kubectl exec -it $pod -- sh $@
+}
+
 alias k="kubectl"
 alias kx="kubectl config get-contexts"
 alias ka="kubectl apply -f"
@@ -71,3 +57,18 @@ alias kpw="watch -n1 'kubectl get pods'"
 alias hc="bundle exec hanami console"
 alias hs="bundle exec hanami server"
 alias h="bundle exec hanami"
+#
+# Common
+alias ll="ls -lh"
+alias la="ls -lah"
+alias s="cd ~/apps"
+alias ..="cd ../"
+alias ...="cd ../../"
+alias d="cd ~/Downloads"
+alias b="bundle exec"
+alias v="nvim"
+alias bo="EDITOR=subl bundle open"
+alias no="EDITOR=subl npm edit"
+alias kov="COVER=1 rspec --no-fail-fast"
+alias tenv="RAILS_ENV=test MIX_ENV=test"
+
