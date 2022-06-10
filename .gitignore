@@ -4,3 +4,7 @@
 *.rdb
 yarn-error.log
 .python-version
+*.sublime-project
+*.sublime-workspace
+
+_scripts
