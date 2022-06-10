@@ -12,3 +12,6 @@ export PATH="$HOME/bin:$PATH"
 
 # iex history
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# disable brew autoupdate
+export HOMEBREW_NO_AUTO_UPDATE=1
