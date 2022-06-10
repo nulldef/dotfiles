@@ -20,8 +20,9 @@ function gmd() {
 }
 
 function com() {
+  comment=$@
   git add .
-  git commit -am $@
+  git commit -am $comment
 }
 
 alias gca="git commit --amend"
@@ -33,12 +34,20 @@ alias gl="git pull --prune"
 alias gb="git branch -vv"
 alias gdd="git diff $(git_develop_branch)"
 alias gddn="git diff $(git_develop_branch) --name-status"
+alias gmod="git merge $(git_develop_branch)"
 
 # Kubernetes
 function kcli() {
-  pod=$1
-  shift
-  kubectl exec -it $pod -- sh $@
+  pod=$1; shift
+
+  if [[ -z "$1" ]]
+  then
+    command='sh'
+  else
+    command=$1; shift
+  fi
+
+  kubectl exec -it $pod -- $command $@
 }
 
 alias k="kubectl"
