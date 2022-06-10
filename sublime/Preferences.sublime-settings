@@ -10,7 +10,7 @@
   "draw_unicode_white_space": "all",
   "ensure_newline_at_eof_on_save": true,
   "highlight_line": true,
-  "rulers": [100],
+  "rulers": [100, 120],
   "vintage_start_in_command_mode": true,
   "show_full_path": true,
   "tab_size": 2,
@@ -29,5 +29,23 @@
     ".Trash-*",
     "node_modules",
     "tmp"
+  ],
+  "binary_file_patterns": [
+    "*.jpg",
+    "*.jpeg",
+    "*.png",
+    "*.gif",
+    "*.ttf",
+    "*.tga",
+    "*.dds",
+    "*.ico",
+    "*.eot",
+    "*.pdf",
+    "*.swf",
+    "*.jar",
+    "*.zip",
+    "*.map",
+    "*.lock",
+    "*-lock.json"
   ],
 }
