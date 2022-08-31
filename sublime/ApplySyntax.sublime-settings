@@ -38,6 +38,14 @@
       "rules": [
         { "contains": "coffee:\\n"  }
       ]
+    },
+    {
+      "syntax": ["Elixir/Syntaxes/Elixir"],
+      "extensions": ["exs", "ex"]
+    },
+    {
+      "syntax": ["Go/Go"],
+      "extensions": ["tpl"]
     }
   ]
 }

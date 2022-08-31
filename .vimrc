@@ -6,6 +6,7 @@ Plug 'arcticicestudio/nord-vim' " https://vimawesome.com/plugin/nord-vim
 Plug 'vim-airline/vim-airline' " https://vimawesome.com/plugin/vim-airline-superman
 Plug 'tpope/vim-commentary' " https://vimawesome.com/plugin/commentary-vim
 Plug 'scrooloose/nerdtree' " https://vimawesome.com/plugin/nerdtree-red
+Plug 'ervandew/supertab' " https://vimawesome.com/plugin/supertab
 
 " https://vimawesome.com/plugin/fzf-vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -76,13 +77,19 @@ nmap <Leader>[ :bprevious<CR>
 nmap <Leader>] :bnext<CR>
 
 " fzf
-map <silent><Leader>p :GFiles<CR>
+if isdirectory(".git")
+  map <silent><Leader>p :GFiles<CR>
+else
+  map <silent><Leader>p :Files<CR>
+endif
 map <silent><Leader>P :Buffers<CR>
 map <silent><Leader>h :History<CR>
 
 " NERDTree
 nnoremap <silent><Leader>b :NERDTreeFind<CR>
+
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif

@@ -32,9 +32,39 @@ alias gdn="git diff master --name-status"
 alias gcob="git checkout @{-1}"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
-alias gdd="git diff $(git_develop_branch)"
-alias gddn="git diff $(git_develop_branch) --name-status"
-alias gmod="git merge $(git_develop_branch)"
+alias glog="git log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%an <%ae>%Creset %s'"
+alias ecom="git commit --allow-empty -m 'empty commit'"
+
+function gdd() { git diff $(git_develop_branch) $@ }
+function gddn() { git diff $(git_develop_branch) --name-status $@ }
+function gmod() { git merge $(git_develop_branch) $@ }
+function update-branches() {
+  branches=$(git for-each-ref --format '%(refname:short)' refs/heads | ag -v 'master|main|develop|dev')
+
+  echo "The following branches will be updated:"
+  echo $branches
+  echo '[y]/n?'
+
+  read answer
+
+  if [[ $answer != 'y' ]]; then
+    echo 'Stopping'
+    return
+  fi
+
+  for branch in $(echo $branches); do
+    gco $branch --quiet
+    gmod --no-edit --quiet
+
+    if [[ $? != '0' ]]; then
+      return
+    fi
+
+    gp --quiet
+
+    echo "$branch updated"
+  done
+}
 
 # Kubernetes
 function kcli() {
@@ -51,7 +81,7 @@ function kcli() {
 }
 
 alias k="kubectl"
-alias kx="kubectl config get-contexts"
+alias kx="kubectx || kubectl config get-contexts"
 alias ka="kubectl apply -f"
 alias kp="kubectl get pods"
 alias ki="kubectl get ingress"
