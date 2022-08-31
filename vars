@@ -15,3 +15,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # disable brew autoupdate
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+# dotfiles bin
+export PATH="$(dirname $0)/bin:$PATH"
