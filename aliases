@@ -83,4 +83,4 @@ alias bo="EDITOR=subl bundle open"
 alias no="EDITOR=subl npm edit"
 alias kov="COVER=1 rspec --no-fail-fast"
 alias tenv="RAILS_ENV=test MIX_ENV=test"
-
+alias chrome="open -a \"Google Chrome\""
