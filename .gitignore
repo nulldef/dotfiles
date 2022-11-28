@@ -9,3 +9,5 @@ yarn-error.log
 
 _scripts
 .env.development
+.vscode
+_local
