@@ -18,7 +18,9 @@
   "trim_trailing_white_space_on_save": true,
   "show_encoding": true,
   "font_size": 13,
+  "font_options": ["no_bold"],
   "close_windows_when_empty": false,
+  "word_wrap": false,
   "folder_exclude_patterns": [
     ".svn",
     ".git",
