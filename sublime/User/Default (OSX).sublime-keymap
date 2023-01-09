@@ -1,0 +1,20 @@
+[
+  { "keys": ["super+alt+q"], "command": "quit" },
+  { "keys": ["super+b"], "command": "git_blame" },
+  { "keys": ["super+shift+w"], "command": "close_other_tabs" },
+  { "keys": ["super+q"], "command": "goto_definition" },
+  { "keys": ["super+i"], "command": "copy_path" },
+  { "keys": ["super+k", "super+d"], "command": "delete_opened_file" },
+  { "keys": ["super+shift+i"], "command": "side_bar_copy_name" },
+  {
+    "keys": ["super+."],
+    "command": "lsp_code_actions",
+    "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
+  },
+  {
+    "keys": ["super+m"],
+    "command": "lsp_code_actions",
+    "args": {"only_kinds": ["source"]},
+    "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider.codeActionKinds"}]
+  },
+]

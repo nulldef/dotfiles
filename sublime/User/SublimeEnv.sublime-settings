@@ -1,0 +1,6 @@
+// SublimeEnv - User
+{
+  "env": {
+    "PATH": "/Users/nulldef/.yarn/bin:/Users/nulldef/.config/yarn/global/node_modules/.bin:/Users/nulldef/.pyenv/shims:/Users/nulldef/.n/bin:/Users/nulldef/.rbenv/shims:/Users/nulldef/.asdf/shims:/usr/local/opt/asdf/libexec/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/Users/nulldef/dotfiles/bin:/Users/nulldef/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/opt/fzf/bin"
+  },
+}
