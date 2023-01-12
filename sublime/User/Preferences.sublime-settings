@@ -40,6 +40,7 @@
      "deps",
      "vendor",
      "coverage",
+     "dist",
      "public/packs*",
      "public/assets"
   ],
