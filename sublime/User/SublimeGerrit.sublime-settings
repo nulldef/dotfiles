@@ -1,0 +1,11 @@
+{
+	"connection.password": "",
+	"connection.timeout": 60,
+	"connection.url": "",
+	"connection.username": "",
+	"git.default_args": "-c color.ui=false",
+	"git.executable_path": "",
+	"notifications.check_interval": 300,
+	"notifications.check_limit": 50,
+	"notifications.check_query": "status:open AND -is:draft"
+}
