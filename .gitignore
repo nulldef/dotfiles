@@ -11,3 +11,4 @@ _scripts
 .env.development
 .vscode
 _local
+.tool-versions
