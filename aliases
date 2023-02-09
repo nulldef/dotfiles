@@ -39,6 +39,9 @@ function gdd() { git diff $(git_develop_branch) $@ }
 function gddn() { git diff $(git_develop_branch) --name-status $@ }
 function gmod() { git merge $(git_develop_branch) $@ }
 
+# GitHub
+alias prs="gh pr list -s open --json=number,author,reviews,title,url,reviewRequests -q 'map(select(.author.login != \"nulldef\" and .reviewRequests.[].login == \"nulldef\" and any(.reviews.[]; .author.login == \"nulldef\" and .state == \"APPROVED\") | not)) | unique | map(\"#\" + (.number | tostring) + \" \" + .title + \" \" + .url) | .[]'"
+
 # Kubernetes
 function kcli() {
   pod=$1; shift
