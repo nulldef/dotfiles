@@ -19,16 +19,23 @@ function gmd() {
    git merge $(git_develop_branch) --no-edit
 }
 
+function gdm() {
+  git diff $(git_main_branch) $@
+}
+
+function gdn() {
+  gdm --name-status $@
+}
+
 function com() {
   comment=$@
   git add .
   git commit -am $comment
 }
 
+alias gs="git show"
 alias gca="git commit --amend"
 alias gam="git add -A .; git commit -a --amend --no-edit"
-alias gdm="git diff master"
-alias gdn="git diff master --name-status"
 alias gcob="git checkout @{-1}"
 alias gl="git pull --prune"
 alias gb="git branch -vv"
@@ -38,6 +45,12 @@ alias ecom="git commit --allow-empty -m 'empty commit'"
 function gdd() { git diff $(git_develop_branch) $@ }
 function gddn() { git diff $(git_develop_branch) --name-status $@ }
 function gmod() { git merge $(git_develop_branch) $@ }
+function pr-list() {
+  gh pr list \
+  --json baseRefName,headRefName,number,statusCheckRollup,title,number,updatedAt,url \
+  --template '{{range .}}{{ $tests := "" }}{{range .statusCheckRollup}}{{if eq .conclusion "SUCCESS"}}{{ $tests = print $tests (autocolor "green" "S") }}{{else if eq .conclusion "FAILURE"}}{{ $tests = print $tests (autocolor "red" "F") }}{{else if eq .conclusion ""}}{{ $tests = print $tests (autocolor "yellow" "R") }}{{end}}{{end}}{{tablerow (printf "#%v" .number | autocolor "green") (.title | truncate 50) $tests (.baseRefName | autocolor "cyan") (print "<-") (.headRefName | autocolor "cyan") (timeago .updatedAt) .url }}{{end}}'
+  $@
+}
 
 # GitHub
 alias prs="gh pr list -s open --json=number,author,reviews,title,url,reviewRequests -q 'map(select(.author.login != \"nulldef\" and .reviewRequests.[].login == \"nulldef\" and any(.reviews.[]; .author.login == \"nulldef\" and .state == \"APPROVED\") | not)) | unique | map(\"#\" + (.number | tostring) + \" \" + .title + \" \" + .url) | .[]'"
@@ -69,7 +82,7 @@ alias kd="kubectl describe"
 alias kpw="watch -n1 'kubectl get pods'"
 
 # Hanami
-alias hc="bundle exec hanami console"
+alias hc="bundle exec hanami console --engine=pry"
 alias hs="bundle exec hanami server"
 alias h="bundle exec hanami"
 #
