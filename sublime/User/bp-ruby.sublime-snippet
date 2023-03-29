@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-binding.pry;
+require 'pry'; binding.pry;
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>bp</tabTrigger>
