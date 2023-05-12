@@ -70,7 +70,7 @@ function pr-list() {
     {{if .isDraft }}
       {{ $numberColor = "yellow" }}
     {{end}}
-    {{tablerow (printf "#%v" .number | autocolor $numberColor) (.author.login) (.title | truncate 50) $tests $review (.baseRefName | autocolor "cyan") (print "<-") (.headRefName | autocolor "cyan") (timeago .updatedAt) .url}}
+    {{tablerow (printf "#%v" .number | autocolor $numberColor) (.author.login) (.title | truncate 50) $tests $review (.baseRefName | autocolor "cyan") (print "<-") (.headRefName | autocolor "cyan") .url}}
   {{end}}'
 
   template=$(echo $template | tr -d '\n' | sed -E 's/\}[[:space:]]+\{/}{/g')
