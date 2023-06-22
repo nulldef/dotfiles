@@ -58,12 +58,13 @@ function pr-list() {
       {{end}}
     {{end}}
     {{ $review := "" }}
-    {{if eq .reviewDecision "APPROVED"}}
-      {{ $review = autocolor "green" "A"}}
-    {{end}}
     {{- range .reviews }}
-      {{if and (eq .author.login "nulldef") (eq .state "APPROVED")}}
-        {{ $review = print $review (autocolor "green" "*")}}
+      {{if (eq .state "APPROVED") }}
+        {{if and (eq .author.login "nulldef")}}
+          {{ $review = print $review (autocolor "cyan" "A")}}
+        {{else}}
+          {{ $review = print $review (autocolor "green" "A")}}
+        {{end}}
       {{end}}
     {{end}}
     {{ $numberColor := "green" }}
