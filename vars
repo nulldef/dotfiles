@@ -18,3 +18,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # dotfiles bin
 export PATH="$(dirname $0)/bin:$PATH"
+
+# settings for `bat` command (analog of `cat`, but fancy)
+export BAT_THEME="Nord"
+export BAT_STYLE="plain"
