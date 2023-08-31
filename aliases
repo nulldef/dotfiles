@@ -12,25 +12,9 @@ function gmm() {
   git merge $(git_main_branch) --no-edit
 }
 
-function gmd() {
-   git checkout $(git_develop_branch)
-   git pull
-   git checkout @{-1}
-   git merge $(git_develop_branch) --no-edit
-}
-
-function gdm() {
-  git diff $(git_main_branch) $@
-}
-
-function gdn() {
-  gdm --name-status $@
-}
-
 function com() {
-  comment=$@
   git add .
-  git commit -am $comment
+  git commit -am $@
 }
 
 alias gs="git show"
@@ -41,10 +25,10 @@ alias gl="git pull --prune"
 alias gb="git branch -vv"
 alias glog="git log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%an <%ae>%Creset %s'"
 alias ecom="git commit --allow-empty -m 'empty commit'"
+alias gdm="git diff $(git_main_branch)"
+alias gdn="gdm --name-status"
 
-function gdd() { git diff $(git_develop_branch) $@ }
-function gddn() { git diff $(git_develop_branch) --name-status $@ }
-function gmod() { git merge $(git_develop_branch) $@ }
+# GitHub
 function pr-list() {
   template='{{range .}}
     {{ $tests := "" }}
@@ -82,16 +66,13 @@ function pr-list() {
   $@
 }
 
-# GitHub
-alias prs="gh pr list -s open --json=number,author,reviews,title,url,reviewRequests -q 'map(select(.author.login != \"nulldef\" and .reviewRequests.[].login == \"nulldef\" and any(.reviews.[]; .author.login == \"nulldef\" and .state == \"APPROVED\") | not)) | unique | map(\"#\" + (.number | tostring) + \" \" + .title + \" \" + .url) | .[]'"
-
 # Kubernetes
 function kcli() {
   pod=$1; shift
 
   if [[ -z "$1" ]]
   then
-    command='sh'
+    command='bash || sh'
   else
     command=$1; shift
   fi
@@ -101,33 +82,20 @@ function kcli() {
 
 alias k="kubectl"
 alias kx="kubectx || kubectl config get-contexts"
-alias ka="kubectl apply -f"
-alias kp="kubectl get pods"
-alias ki="kubectl get ingress"
-alias ks="kubectl get services"
-alias kss="kubectl get secrets"
-alias kg="kubectl get"
-alias kl="kubectl logs"
 alias kd="kubectl describe"
-alias kpw="watch -n1 'kubectl get pods'"
+alias kl="kubectl logs"
+alias kg="kubectl get"
+alias kp="kubectl get pods"
 
-# Hanami
-alias hc="bundle exec hanami console --engine=pry"
-alias hs="bundle exec hanami server"
-alias h="bundle exec hanami"
-#
 # Common
 alias ll="ls -lh"
 alias la="ls -lah"
 alias s="cd ~/apps"
-alias ..="cd ../"
-alias ...="cd ../../"
 alias d="cd ~/Downloads"
 alias b="bundle exec"
 alias v="nvim"
 alias bo="EDITOR=subl bundle open"
 alias no="EDITOR=subl npm edit"
-alias kov="COVER=1 rspec --no-fail-fast"
 alias tenv="RAILS_ENV=test MIX_ENV=test"
 alias chrome="open -a \"Google Chrome\""
 alias da="direnv allow"
