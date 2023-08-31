@@ -13,8 +13,9 @@ function gmm() {
 }
 
 function com() {
+  comment=$@
   git add .
-  git commit -am $@
+  git commit -am $comment
 }
 
 alias gs="git show"
