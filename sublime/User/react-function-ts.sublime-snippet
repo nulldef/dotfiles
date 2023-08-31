@@ -2,10 +2,10 @@
   <content><![CDATA[
 import React, { ReactElement } from "react"
 
-interface I${1:Component}Props {
+interface ${1:Component}Props {
 }
 
-const ${1:Component} = ({}: I${1:Component}Props): ReactElement => {
+const ${1:Component} = ({}: ${1:Component}Props): ReactElement => {
   return ${0:<>${1:Component} is gonna be here!</>}
 }
 

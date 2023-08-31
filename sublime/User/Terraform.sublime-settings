@@ -1,7 +1,6 @@
 {
 	"extensions":
 	[
-		"py3",
-		"pyw",
-	],
+		"tf"
+	]
 }

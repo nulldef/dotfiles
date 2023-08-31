@@ -21,6 +21,7 @@
 		"Emmet",
 		"Git",
 		"JSON Reindent",
+		"JsPrettier",
 		"Laravel Blade Highlighter",
 		"Less",
 		"LSP",
@@ -38,8 +39,10 @@
 		"Ruby Slim",
 		"Sass",
 		"SideBarEnhancements",
+		"SqlBeautifier",
 		"SublimeEnv",
 		"SyncedSideBar",
+		"Terraform",
 	],
 	"repositories":
 	[

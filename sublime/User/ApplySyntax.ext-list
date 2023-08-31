@@ -8,24 +8,40 @@
 		"sh",
 		"zsh"
 	],
-	"HAML":
+	"Go":
 	[
-		"haml"
+		"tpl"
+	],
+	"Elixir":
+	[
+		"ex",
+		"exs"
+	],
+	"Slim":
+	[
+		"slim"
+	],
+	"CoffeeScript":
+	[
+		"slim"
+	],
+	"Ruby":
+	[
+		"jbuilder",
+		"podspec",
+		"rabl",
+		"rake",
+		"rb",
+		"simplecov",
+		"thor"
 	],
 	"HTML (Rails)":
 	[
 		"html.erb"
 	],
-	"JSON":
+	"HAML":
 	[
-		".babelrc",
-		".bowerrc",
-		".csslintrc",
-		".eslintrc",
-		".jscsrc",
-		".jshintrc",
-		".stylelintrc",
-		"geojson"
+		"haml"
 	],
 	"PHP":
 	[
@@ -40,25 +56,6 @@
 		"py3",
 		"pyw"
 	],
-	"Ruby":
-	[
-		"jbuilder",
-		"podspec",
-		"rabl",
-		"rake",
-		"rb",
-		"simplecov",
-		"thor"
-	],
-	"Shell-Unix-Generic":
-	[
-		".profile",
-		"ash",
-		"bash",
-		"bashrc",
-		"sh",
-		"zsh"
-	],
 	"XML":
 	[
 		"xml.dist"
@@ -70,21 +67,24 @@
 		"yml",
 		"yml.dist"
 	],
-	/*"Go":
+	"JSON":
 	[
-		"tpl"
-	],*/
-	/*"Elixir":
+		".babelrc",
+		".bowerrc",
+		".csslintrc",
+		".eslintrc",
+		".jscsrc",
+		".jshintrc",
+		".stylelintrc",
+		"geojson"
+	],
+	"Shell-Unix-Generic":
 	[
-		"ex",
-		"exs"
-	],*/
-	/*"Slim":
-	[
-		"slim"
-	],*/
-	/*"CoffeeScript":
-	[
-		"slim"
-	],*/
+		".profile",
+		"ash",
+		"bash",
+		"bashrc",
+		"sh",
+		"zsh"
+	],
 }
