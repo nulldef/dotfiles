@@ -20,6 +20,7 @@
 		"LSP",
 		"LSP-css",
 		"LSP-dockerfile",
+		"LSP-eslint",
 		"LSP-json",
 		"LSP-typescript",
 		"LSP-yaml",
