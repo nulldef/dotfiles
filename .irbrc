@@ -19,7 +19,7 @@ def _m(instance)
   instance.methods - Object.instance_methods
 end
 
-def c(instance, method)
+def _c(instance, method)
   method = method.to_sym
   clazz = instance.is_a?(Class) ? instance : instance.class
   clazz.instance_method(method).comment.display
