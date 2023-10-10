@@ -71,15 +71,20 @@ function pr-list() {
 # Kubernetes
 function kcli() {
   pod=$1; shift
+  command=$1; shift
 
-  if [[ -z "$1" ]]
+  if [[ -z "$command" ]]
   then
-    command='bash || sh'
-  else
-    command=$1; shift
+    command='sh'
   fi
 
   kubectl exec -it $pod -- $command $@
+}
+
+function kwatch() {
+  pattern=$1; shift
+
+  watch -n1 "kubectl get pods --sort-by=.metadata.creationTimestamp $@ | ag $pattern"
 }
 
 alias k="kubectl"
