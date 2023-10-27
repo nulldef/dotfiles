@@ -4,7 +4,7 @@
   { "keys": ["super+b"], "command": "git_blame" },
   { "keys": ["super+shift+w"], "command": "close_other_tabs" },
   { "keys": ["super+q"], "command": "goto_definition" },
-  { "keys": ["super+i"], "command": "copy_relative_path" },
+  { "keys": ["super+i"], "command": "side_bar_copy_path_relative_from_project" },
   { "keys": ["super+shift+i"], "command": "side_bar_copy_name" },
   { "keys": ["super+k", "super+d"], "command": "delete_opened_file" },
 
