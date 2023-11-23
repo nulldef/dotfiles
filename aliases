@@ -94,6 +94,11 @@ alias kl="kubectl logs"
 alias kg="kubectl get"
 alias kp="kubectl get pods"
 
+# Docker Compose
+alias dc="docker compose"
+alias dcr="docker compose run -e ROLE=cli --rm"
+alias dex="docker compose exec -e ROLE=cli -it"
+
 # Common
 alias ll="ls -lh"
 alias la="ls -lah"
