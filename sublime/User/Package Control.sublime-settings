@@ -23,6 +23,7 @@
 		"LSP-dockerfile",
 		"LSP-eslint",
 		"LSP-json",
+		"LSP-tailwindcss",
 		"LSP-typescript",
 		"LSP-yaml",
 		"nginx",
