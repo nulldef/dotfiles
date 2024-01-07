@@ -44,4 +44,8 @@
     "keys": ["ctrl+e"],
     "command": "emmet_expand_abbreviation"
   },
+  {
+    "keys": ["alt+f"],
+    "command": "js_prettier"
+  },
 ]

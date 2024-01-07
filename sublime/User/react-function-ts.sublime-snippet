@@ -1,16 +1,13 @@
 <snippet>
   <content><![CDATA[
-import React, { ReactElement } from "react"
-
 interface ${1:Component}Props {
 }
 
-const ${1:Component} = ({}: ${1:Component}Props): ReactElement => {
+const ${1:Component} = ({}: ${1:Component}Props) => {
   return ${0:<>${1:Component} is gonna be here!</>}
 }
 
 export default ${1:Component}
-
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>fc</tabTrigger>

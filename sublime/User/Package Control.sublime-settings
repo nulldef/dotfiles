@@ -18,6 +18,7 @@
 		"Git",
 		"Indent XML",
 		"JSON Reindent",
+		"JsPrettier",
 		"LSP",
 		"LSP-css",
 		"LSP-dockerfile",
