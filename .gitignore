@@ -13,3 +13,4 @@ _scripts
 _local
 .tool-versions
 .swp
+lazy-lock.json
