@@ -1,8 +1,4 @@
-# vim: set syntax=sh;
-
-macdown() {
-  "$(mdfind kMDItemCFBundleIdentifier=com.uranusjr.macdown | head -n1)/Contents/SharedSupport/bin/macdown" $@
-}
+# vim: set syntax=bash:
 
 # Git
 function gmm() {

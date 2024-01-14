@@ -1,4 +1,4 @@
-# vi: set syntax=sh
+# vim: set syntax=bash:
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -15,9 +15,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # disable brew autoupdate
 export HOMEBREW_NO_AUTO_UPDATE=1
-
-# dotfiles bin
-export PATH="$(dirname $0)/bin:$PATH"
 
 # settings for `bat` command (analog of `cat`, but fancy)
 export BAT_THEME="Nord"
