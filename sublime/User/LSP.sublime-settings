@@ -2,15 +2,19 @@
 {
   "show_diagnostics_panel_on_save": 0,
   "clients": {
-    "ruby": {
+    "rust-analyzer": { "enabled": true, },
+    "ruby-lsp": {
       "enabled": true,
-      "command": ["solargraph", "stdio"],
+      "command": ["ruby-lsp"],
       "selector": "source.ruby | text.html.ruby",
       "initializationOptions": {
-        "diagnostics": false,
+        "enabledFeatures": {
+          "diagnostics": true,
+        },
+        "experimentalFeaturesEnabled": true,
       },
     },
-    "rust-analyzer":
+    "ruby":
     {
 			"enabled": true
 		},

@@ -1,0 +1,17 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+  "variables":
+  {
+  },
+  "globals":
+  {
+  },
+  "rules":
+  [
+    {
+      "name": "Mapping Key Names",
+      "scope": "meta.mapping.key string",
+      "foreground": "#ffad66"
+    }
+  ]
+}

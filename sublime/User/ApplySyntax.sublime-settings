@@ -23,14 +23,23 @@
       "syntax": ["ShellScript/Bash", "ShellScript/Shell-Unix-Generic"],
       "rules": [{"file_path": ".*\\.env\\.*"}]
     },
-    // {
-    //   "syntax": ["Ruby Slim/Syntaxes/Slim"],
-    //   "extensions": ["slim"]
-    // },
     {
       "syntax": ["Better CoffeeScript/CoffeeScript"],
       "match": "all",
       "rules": [{ "contains": "coffee:\\n" }]
+    },
+    {
+      "syntax": ["Tailwind CSS/Tailwind CSS"],
+      "match": "all",
+      "rules": [{ "contains": "@tailwind" }, { "file_path": ".*\\.scss$" }]
+    },
+    {
+      "syntax": ["Prisma/resources/syntax/Prisma"],
+      "rules": [{"file_path": ".*\\.prisma$"}]
+    },
+    {
+      "syntax": ["TOML/TOML"],
+      "rules": [{"file_path": ".*\\.toml$"}]
     }
   ]
 }
