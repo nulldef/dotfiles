@@ -14,3 +14,4 @@ _local
 .tool-versions
 .swp
 lazy-lock.json
+.ruby-lsp
