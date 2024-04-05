@@ -31,7 +31,7 @@
     {
       "syntax": ["Tailwind CSS/Tailwind CSS"],
       "match": "all",
-      "rules": [{ "contains": "@tailwind" }, { "file_path": ".*\\.scss$" }]
+      "rules": [{ "contains": "@tailwind" }, { "file_path": ".*\\.s?css$" }]
     },
     {
       "syntax": ["Prisma/resources/syntax/Prisma"],
