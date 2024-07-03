@@ -1,7 +1,7 @@
 // SublimeEnv - User
 {
   "env": {
-    "PATH": "/Users/nulldef/work/owl-backend/bin:/Users/nulldef/go/bin:/Users/nulldef/bin/google-cloud-sdk/bin:/Users/nulldef/.yarn/bin:/Users/nulldef/.config/yarn/global/node_modules/.bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/Users/nulldef/dotfiles/bin:/Users/nulldef/bin:/Users/nulldef/.asdf/shims:/usr/local/opt/asdf/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/opt/fzf/bin"
+    "PATH": "/Users/nulldef/.yarn/bin:/Users/nulldef/.config/yarn/global/node_modules/.bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/Users/nulldef/dotfiles/bin:/Users/nulldef/bin:/Users/nulldef/.asdf/shims:/usr/local/opt/asdf/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/opt/fzf/bin"
   },
   "debug": true
 }
