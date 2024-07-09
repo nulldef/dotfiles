@@ -13,6 +13,10 @@
         },
         "experimentalFeaturesEnabled": true,
       },
-    }
-  }
+    },
+    "ruby":
+    {
+			"enabled": false,
+		},
+  },
 }
