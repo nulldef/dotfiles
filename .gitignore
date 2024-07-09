@@ -15,3 +15,4 @@ _local
 .swp
 lazy-lock.json
 .ruby-lsp
+.zed
