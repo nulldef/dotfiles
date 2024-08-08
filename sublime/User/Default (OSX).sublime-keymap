@@ -4,8 +4,9 @@
   { "keys": ["super+b"], "command": "git_blame" },
   { "keys": ["super+shift+w"], "command": "close_other_tabs" },
   { "keys": ["super+q"], "command": "goto_definition" },
-  { "keys": ["super+i"], "command": "side_bar_copy_path_relative_from_project_encoded" },
-  { "keys": ["super+shift+i"], "command": "side_bar_copy_name" },
+  { "keys": ["super+i"], "command": "copy_path" },
+  { "keys": ["super+alt+i"], "command": "copy_path_with_line" },
+  { "keys": ["super+shift+i"], "command": "copy_filename" },
   { "keys": ["super+k", "super+d"], "command": "delete_opened_file" },
 
   // LSP
