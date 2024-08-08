@@ -2,13 +2,14 @@
 
 # Git
 function com() {
-  git add .
-  git commit -am $@
+  message="$@"
+  command="git add . && git commit -am '$message'"
+  eval $command
 }
 
 function gdm() { git diff $(git_main_branch) $@ }
 function gdn() { gdm --name-status }
-function gbrm() { git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d }
+function gbrm() { git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D }
 
 alias gs="git show"
 alias gca="git commit --amend"
