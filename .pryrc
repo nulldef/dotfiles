@@ -1,7 +1,5 @@
 # vim: set syntax=ruby
 
-include FactoryBot::Syntax::Methods if defined?(FactoryBot::Syntax::Methods)
-
 Pry.config.theme = "pry-modern-256"
 Pry.config.history_file = "~/.pry_history"
 
