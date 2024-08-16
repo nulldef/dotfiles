@@ -1,0 +1,7 @@
+{
+  "Place console.log": {
+    "prefix": "log",
+    "body": ["console.log('__KEK__', $1)"],
+    "description": "Place console.log"
+  }
+}

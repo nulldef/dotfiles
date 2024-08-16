@@ -1,0 +1,7 @@
+{
+  "Place binding.pry": {
+    "prefix": "bp",
+    "body": ["require 'pry'; binding.pry"],
+    "description": "Place binding.pry"
+  }
+}

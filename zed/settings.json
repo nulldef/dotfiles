@@ -1,0 +1,77 @@
+{
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "buffer_font_features": {
+    "calt": false
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé - No Italics",
+    "dark": "One Dark"
+  },
+  "autosave": "off",
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "enable_language_server": true,
+  "preferred_line_length": 120,
+  "projects_online_by_default": false,
+  "show_whitespaces": "boundary",
+  "soft_wrap": "none",
+  "wrap_guides": [120],
+  "tab_size": 2,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "assistant": {
+    "version": "2",
+    "enabled": false
+  },
+  "languages": {
+    "Ruby": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      },
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"]
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    }
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "initialization_options": {
+        "enabledFeatures": {
+          "diagnostics": false
+        }
+      }
+    }
+  }
+}
