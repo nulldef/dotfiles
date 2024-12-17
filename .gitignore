@@ -16,3 +16,4 @@ _local
 lazy-lock.json
 .ruby-lsp
 .zed
+kubernetes/partials/krane
