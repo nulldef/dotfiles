@@ -19,3 +19,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # settings for `bat` command (analog of `cat`, but fancy)
 export BAT_THEME="Nord"
 export BAT_STYLE="plain"
+
+# ruby build options for Apple Silicon
+export RUBY_CONFIGURE_OPTS="--with-zlib-dir=$(brew --prefix zlib) --with-openssl-dir=$(brew --prefix openssl@1.1) --with-readline-dir=$(brew --prefix readline) --with-libyaml-dir=$(brew --prefix libyaml)"
+
