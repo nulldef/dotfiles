@@ -8,11 +8,10 @@ class SqlFormatCommand(sublime_plugin.TextCommand):
     region = sublime.Region(0, file_size)
     content = self.view.substr(region)
 
-    command = ["cli-sql-formatter"]
-    command.extend(["-d", "sql"])
-    command.extend(["-i", "2"])
-    command.extend(["-d", "pl/sql"])
-    command.extend(["-u"])
+    command = ["sqlfmt"]
+    command.extend(["--print-width", "100"])
+    command.extend(["--tab-width", "2"])
+    command.extend(["--use-spaces"])
 
     result = subprocess.run(command, text=True, input=content, capture_output=True)
     result.check_returncode()
