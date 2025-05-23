@@ -1,6 +1,6 @@
 {
   "features": {
-    "edit_prediction_provider": "none"
+    "inline_completion_provider": "none"
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
@@ -25,9 +25,6 @@
     "inline_blame": {
       "enabled": false
     }
-  },
-  "collaboration_panel": {
-    "button": false
   },
   "enable_language_server": true,
   "preferred_line_length": 120,
