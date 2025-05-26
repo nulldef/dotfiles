@@ -7,7 +7,7 @@ const ${1:Component} = () => {
 export default ${1:Component}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>fcj</tabTrigger>
+  <tabTrigger>fc</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js,source.tsx</scope>
+  <scope>source.js,source.jsx</scope>
 </snippet>

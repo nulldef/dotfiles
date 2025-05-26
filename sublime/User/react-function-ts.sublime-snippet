@@ -1,9 +1,9 @@
 <snippet>
   <content><![CDATA[
-interface ${1:Component}Props {
+interface Props {
 }
 
-const ${1:Component} = ({}: ${1:Component}Props) => {
+const ${1:Component} = ({}: Props) => {
   return ${0:<>${1:Component} is gonna be here!</>}
 }
 
@@ -12,5 +12,5 @@ export default ${1:Component}
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>fc</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.ts,source.tsx</scope>
+  <scope>source.tsx</scope>
 </snippet>
