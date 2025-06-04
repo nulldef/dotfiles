@@ -22,6 +22,7 @@
 		"JSON Reindent",
 		"JsPrettier",
 		"LSP",
+		"LSP-copilot",
 		"LSP-css",
 		"LSP-dockerfile",
 		"LSP-eslint",
